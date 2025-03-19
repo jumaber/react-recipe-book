@@ -4,22 +4,29 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  color: oklch(0.277 0.046 192.524);
 }
 
 .sidebar-link-active {
-  @apply flex flex-row items-center gap-2 p-4 rounded-xl font-bold text-black bg-orange-50 border-orange-100 hover:bg-orange-50 hover:text-black hover:shadow-sm no-underline;
+  @apply flex flex-row items-center gap-2 p-4 rounded-xl font-bold text-teal-950 bg-orange-50 border-orange-100 hover:bg-orange-50 hover:text-teal-950 hover:shadow-sm no-underline;
 }
 
 .sidebar-link {
-  @apply flex flex-row items-center gap-2 p-4 rounded-xl font-medium text-black hover:bg-orange-100 hover:text-black hover:font-bold hover:shadow-sm no-underline;
+  @apply flex flex-row items-center gap-2 p-4 rounded-xl font-medium text-teal-950 hover:bg-orange-100 hover:text-teal-950 hover:font-bold hover:shadow-sm no-underline;
 }
 
 .btn {
-  @apply flex max-h-max min-w-max p-3 rounded-xl justify-center content-center items-center text-center text-black font-bold bg-orange-400 hover:bg-orange-500 hover:text-black hover:font-bold hover:shadow-2xs; 
+  @apply flex h-[62px] min-w-max p-3 rounded-xl justify-center content-center items-center text-center text-teal-950 font-bold bg-orange-400 hover:bg-orange-500 hover:text-teal-950 hover:font-bold hover:shadow-2xs; 
 }
 
+
+.btn-sm {
+  @apply flex h-[43px] min-w-max p-3 rounded-xl justify-center content-center items-center text-center text-white font-bold bg-teal-950 hover:bg-teal-800; 
+}
+
+
 .footer-link {
-  @apply p-2 rounded-xl text-xs font-semibold text-black hover:bg-rose-200 hover:text-black hover:font-bold;
+  @apply p-2 rounded-xl text-xs font-semibold text-sky-950 hover:bg-rose-200 hover:text-teal-950 hover:font-bold;
 }
 
 .card{
@@ -27,7 +34,7 @@ body {
 }
 
 .card-title{
-  @apply text-lg font-bold mt-2 overflow-hidden;
+  @apply text-lg font-bold mt-2 overflow-hidden text-teal-900;
 }
 
 .card-img {
