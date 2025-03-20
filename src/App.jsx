@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Sidebar } from './components/Sidebar';
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
+import { Recipe } from './components/Recipe';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       {/* Main Content with left margin */}
       <div className="ml-64 h-screen overflow-y-auto p-8 py-12 bg-orange-100 w-full">
         <MainContent />
+        <Recipe />
       </div>
     </div>
   );

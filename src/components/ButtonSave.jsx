@@ -1,6 +1,6 @@
 export function ButtonSave() {
   
   return(
-     <button class="btn-sm" onclick="saveContent()">Save</button>
+     <button className="btn-sm" onclick="saveContent()">Save</button>
   )
 }
