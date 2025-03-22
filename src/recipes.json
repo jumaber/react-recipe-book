@@ -2,7 +2,6 @@
   {
     "id": 1,
     "title": "Quinoa Kale Salad",
-    "description": "A nutrient-rich salad with quinoa, kale, and a bright lemon vinaigrette.\nPerfect for a light lunch.",
     "ingredients": [
       "1 cup quinoa",
       "2 cups chopped kale",
@@ -12,14 +11,20 @@
       "2 tbsp olive oil",
       "Salt and pepper to taste"
     ],
-    "images": [
+    "directions": [
+      "Rinse quinoa and cook it in water until tender.",
+      "Toss the cooked quinoa with chopped kale in a large bowl.",
+      "Add cherry tomatoes, red onion, lemon juice, and olive oil.",
+      "Season with salt and pepper to taste.",
+      "Serve chilled or at room temperature."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1623428186429-e76984bf48ad?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 2,
     "title": "Avocado Toast with Smoked Salmon",
-    "description": "A balanced breakfast option loaded with healthy fats and omega-3s.\nA great start to your day.",
     "ingredients": [
       "2 slices whole-grain bread (or gluten-free bread)",
       "1 ripe avocado",
@@ -28,14 +33,20 @@
       "Salt and pepper to taste",
       "Optional: capers or dill"
     ],
-    "images": [
+    "directions": [
+      "Toast the bread slices until golden.",
+      "Mash the avocado with lemon juice, salt, and pepper.",
+      "Spread the avocado mixture evenly over the toast.",
+      "Layer smoked salmon on top and add capers or dill if desired.",
+      "Serve immediately."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1604762528006-f8b521821497?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 3,
     "title": "Grilled Chicken & Veggie Bowl",
-    "description": "A lean protein bowl featuring grilled chicken and a mix of steamed vegetables.\nIdeal for a nutritious dinner.",
     "ingredients": [
       "150g chicken breast",
       "1 cup broccoli florets",
@@ -44,14 +55,20 @@
       "1 tbsp olive oil",
       "Salt, pepper, and herbs to taste"
     ],
-    "images": [
+    "directions": [
+      "Season the chicken breast with salt, pepper, and herbs.",
+      "Grill the chicken until fully cooked, then slice it.",
+      "Steam the broccoli, carrots, and bell peppers until tender.",
+      "Combine the sliced chicken and vegetables in a bowl.",
+      "Drizzle olive oil over the mixture and adjust seasonings."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1511378156040-1259b5bcd0fb?q=80&w=3079&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 4,
     "title": "Mediterranean Chickpea Salad",
-    "description": "A refreshing salad with chickpeas, cucumbers, tomatoes, and olives tossed in a light vinaigrette.\nA satisfying and vibrant meal.",
     "ingredients": [
       "1 can chickpeas, drained and rinsed",
       "1 cucumber, diced",
@@ -62,14 +79,20 @@
       "1 tbsp red wine vinegar",
       "Salt and pepper to taste"
     ],
-    "images": [
+    "directions": [
+      "Place the rinsed chickpeas in a large mixing bowl.",
+      "Add the diced cucumber, cherry tomatoes, black olives, and red onion.",
+      "Drizzle olive oil and red wine vinegar over the salad.",
+      "Toss gently to combine all the ingredients.",
+      "Season with salt and pepper and chill before serving."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1618449233264-95366c6f5048?q=80&w=2863&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 5,
     "title": "Vegan Buddha Bowl",
-    "description": "A colorful bowl filled with roasted vegetables, chickpeas, quinoa, and a tahini dressing.\nA nourishing vegan option.",
     "ingredients": [
       "1 cup quinoa",
       "1 sweet potato, cubed",
@@ -80,14 +103,20 @@
       "Juice of 1 lemon",
       "Salt and pepper to taste"
     ],
-    "images": [
+    "directions": [
+      "Cook the quinoa according to package instructions.",
+      "Roast the sweet potato cubes and broccoli florets in the oven until tender.",
+      "In a bowl, combine quinoa, roasted vegetables, chickpeas, and mixed greens.",
+      "Drizzle with tahini and lemon juice dressing.",
+      "Season with salt and pepper and serve warm."
+    ],
+    "image": [
       "https://plus.unsplash.com/premium_photo-1664648005775-5f32b1f0f4a5?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 6,
     "title": "Zucchini Noodles with Pesto",
-    "description": "A low-carb alternative to pasta, tossed in a fresh basil pesto sauce.\nEnjoy a burst of flavor with every bite.",
     "ingredients": [
       "2 large zucchinis (spiralized)",
       "1 cup fresh basil leaves",
@@ -97,14 +126,20 @@
       "Salt and pepper to taste",
       "Optional: cherry tomatoes"
     ],
-    "images": [
+    "directions": [
+      "Spiralize the zucchinis to create noodles.",
+      "Blend basil leaves, pine nuts, olive oil, garlic, salt, and pepper to make the pesto.",
+      "Toss the zucchini noodles with the prepared pesto sauce.",
+      "If desired, add cherry tomatoes for extra flavor.",
+      "Serve immediately."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1645775372267-c0299feab469?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 7,
     "title": "Spicy Tofu Stir Fry",
-    "description": "A protein-packed stir fry with tofu, vegetables, and a spicy sauce.\nSpice up your meal with this dynamic dish.",
     "ingredients": [
       "200g firm tofu, cubed",
       "1 cup broccoli florets",
@@ -115,14 +150,20 @@
       "1 tsp sesame oil",
       "1 garlic clove, minced"
     ],
-    "images": [
+    "directions": [
+      "Cube the tofu and pat dry with a paper towel.",
+      "Stir-fry the tofu in a pan until golden on all sides, then remove from the pan.",
+      "Sauté broccoli, red bell pepper, snap peas, and minced garlic in the same pan.",
+      "Return the tofu to the pan and add soy sauce, sriracha, and sesame oil.",
+      "Stir-fry for a few more minutes and serve hot."
+    ],
+    "image": [
       "https://plus.unsplash.com/premium_photo-1712604940796-1a1dd9021bf1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 8,
     "title": "Baked Salmon with Asparagus",
-    "description": "A heart-healthy dish featuring omega-3 rich salmon and tender asparagus.\nA perfect blend of taste and nutrition.",
     "ingredients": [
       "200g salmon fillet",
       "1 bunch asparagus",
@@ -130,14 +171,20 @@
       "2 tbsp olive oil",
       "Salt, pepper, and dill to taste"
     ],
-    "images": [
+    "directions": [
+      "Preheat your oven to 400°F (200°C).",
+      "Place the salmon fillet and asparagus on a lined baking sheet.",
+      "Drizzle olive oil over both and season with salt, pepper, and dill.",
+      "Arrange lemon slices over the salmon.",
+      "Bake for 12-15 minutes until the salmon is cooked through."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1560717845-968823efbee1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 9,
     "title": "Sweet Potato & Black Bean Chili",
-    "description": "A hearty, vegan chili packed with sweet potatoes, black beans, and spices.\nA warming dish for any season.",
     "ingredients": [
       "2 medium sweet potatoes, cubed",
       "1 can black beans, drained and rinsed",
@@ -148,14 +195,20 @@
       "1 tsp cumin",
       "Salt and pepper to taste"
     ],
-    "images": [
+    "directions": [
+      "Sauté the chopped onion and minced garlic in a large pot until fragrant.",
+      "Add cubed sweet potatoes, black beans, and diced tomatoes to the pot.",
+      "Stir in chili powder, cumin, salt, and pepper.",
+      "Bring the mixture to a simmer and cook until the sweet potatoes are tender.",
+      "Serve hot, garnished with fresh herbs if desired."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1666819632298-fe15dc7d4c34?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 10,
     "title": "Turkey Lettuce Wraps",
-    "description": "Lean turkey cooked with vegetables and served in crisp lettuce leaves for a low-carb meal.\nA fresh take on wraps.",
     "ingredients": [
       "200g ground turkey",
       "1 red bell pepper, diced",
@@ -165,14 +218,20 @@
       "1 tsp ginger, grated",
       "Large lettuce leaves for wrapping"
     ],
-    "images": [
+    "directions": [
+      "Cook the ground turkey in a skillet until browned.",
+      "Add diced red bell pepper, shredded carrot, and chopped water chestnuts.",
+      "Stir in soy sauce and grated ginger.",
+      "Sauté until the vegetables are tender and well mixed with the turkey.",
+      "Spoon the mixture into large lettuce leaves and serve immediately."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?q=80&w=3064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 11,
     "title": "Berry Almond Smoothie Bowl",
-    "description": "A refreshing smoothie bowl loaded with mixed berries, almond milk, and crunchy almonds.\nStart your day with a burst of energy.",
     "ingredients": [
       "1 cup mixed berries",
       "1 banana",
@@ -181,14 +240,19 @@
       "1/4 cup sliced almonds",
       "Optional: chia seeds or granola for topping"
     ],
-    "images": [
+    "directions": [
+      "Blend the mixed berries, banana, almond milk, and almond butter until smooth.",
+      "Pour the smoothie into a bowl.",
+      "Top with sliced almonds and add chia seeds or granola if desired.",
+      "Enjoy immediately for the best texture and flavor."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1590301157284-ab2f8707bdc1?q=80&w=3135&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   },
   {
     "id": 12,
     "title": "Lentil Soup with Spinach",
-    "description": "A warming, fiber-rich soup made with lentils, tomatoes, and fresh spinach.\nEnjoy this comforting and hearty soup.",
     "ingredients": [
       "1 cup dried lentils",
       "1 can diced tomatoes",
@@ -199,7 +263,15 @@
       "1 tsp cumin",
       "Salt and pepper to taste"
     ],
-    "images": [
+    "directions": [
+      "Rinse the lentils and set them aside.",
+      "Sauté chopped onion and minced garlic in a large pot until soft.",
+      "Add diced tomatoes and vegetable broth to the pot.",
+      "Stir in the lentils, cumin, salt, and pepper, and bring to a simmer.",
+      "Once the lentils are tender, add the fresh spinach and cook until wilted.",
+      "Serve the soup warm."
+    ],
+    "image": [
       "https://images.unsplash.com/photo-1620256114757-322387444c16?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ]
   }
