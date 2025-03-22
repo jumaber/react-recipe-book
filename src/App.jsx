@@ -4,6 +4,9 @@ import { Sidebar } from './components/Sidebar';
 import { MainContent } from './components/MainContent';
 import { Footer } from './components/Footer';
 import { Recipe } from './components/Recipe';
+import { About } from './components/Recipe';
+import {Routes, Route } from 'react-router-dom'
+
 
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
         <Recipe />
       </div>
     </div>
+
   );
 }
 
