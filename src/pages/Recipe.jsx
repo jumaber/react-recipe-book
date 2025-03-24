@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export function Recipe({ recipes, setRecipes }) {
 
   const navigate = useNavigate();
-  
+
   const { id } = useParams();
 
   // Guard clause if no recipe data is provided
@@ -33,7 +33,7 @@ const currentRecipe = recipes.find((recipe) => recipe.id === parseInt(id));
 return (
     <div className="flex p-10 bg-orange-50 h-full"> 
 
-      <div className="flex flex-col max-h-min bg-white my-10 p-6 rounded-lg ml-64">
+      <div className="flex flex-col max-h-min w-full bg-white my-10 p-6 rounded-lg ml-64">
         {/* Header */}
         <div className="mb-6 flex flex-row justify-end">
           <img src={close} alt="Close icon" />
