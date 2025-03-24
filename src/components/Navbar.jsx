@@ -6,7 +6,7 @@ export function Navbar (){
     <Link to="/">
       <div className='flex items-center gap-2 mb-27'>
         <img src={Logo} alt="logo" className="h-12"/>
-        <p className="text-2xl font-black">Peachy</p>
+        <p className="logo-name">Peachy</p>
       </div>
     </Link>
     )

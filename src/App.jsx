@@ -15,6 +15,8 @@ function App() {
     return stored ? JSON.parse(stored) : recipesData;
   });
 
+
+
   useEffect(() => {
     localStorage.setItem("recipes", JSON.stringify(recipes));
   }, [recipes]);
@@ -26,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContent recipes={recipes} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/recipe/:id" element={<Recipe recipe={recipes} />} />
+        <Route path="/recipe/:id" element={<Recipe recipes={recipes} setRecipes={setRecipes} />} />
         <Route path="/recipeform" element={<RecipeForm recipes={recipes} setRecipes={setRecipes} />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
