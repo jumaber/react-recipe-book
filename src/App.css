@@ -63,6 +63,18 @@ body {
 
 .card-single-recipe-img{
   @apply w-full h-80 object-cover rounded-xl;
+}
 
+
+@keyframes sneak {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(100vw);}
+}
+
+.animate-sneak {
+  animation: sneak 6s ease-in-out infinite;
 }
 
