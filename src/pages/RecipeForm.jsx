@@ -11,16 +11,16 @@ export function RecipeForm({ recipes, setRecipes }) {
 
   const addRecipe = () => {
     if (!title.trim() || !ingredients.trim() || !directions.trim()) {
-      alert("Please fill in all fields.");
+      alert("Please fill in all fields. Thank you!");
       return;
     }
 
     const newRecipe = {
       id: recipes.length + 1,
       title,
-      ingredients: ingredients.split(",").map(i => i.trim()),
-      directions: directions.split(".").map(d => d.trim()).filter(Boolean),
-      image: []  // Or add a placeholder image URL
+      ingredients: ingredients.split("\n").map(i => i.trim()), //each line is the delimiter
+      directions: directions.split("\n").map(d => d.trim()).filter(Boolean), //each line is the delimiter
+      image: []  // Placeholder for later
     };
 
     const updatedRecipes = [...recipes, newRecipe];
@@ -32,7 +32,7 @@ export function RecipeForm({ recipes, setRecipes }) {
     setDirections("");
 
     // Go back to homepage
-    navigate("/");
+    navigate(`/recipe/${newRecipe.id}`);
   };
 
   return (
