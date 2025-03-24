@@ -22,8 +22,8 @@ export function Recipe({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="flex p-10 bg-orange-50 h-auto"> 
-      <div className="flex flex-col w-full min-h-min bg-white my-10 p-6 rounded-lg ml-64">
+    <div className="flex  bg-orange-50 h-auto sm:p-3 lg:p-10"> 
+      <div className="flex flex-col w-full min-h-min bg-white my-10 p-6 rounded-lg sm:ml-0  lg:ml-64">
         {/* Header */}
         <div className="mb-6 flex flex-row justify-end">
           <img src={close} alt="Close icon" className="cursor-pointer" onClick={() => navigate("/")} />
