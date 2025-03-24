@@ -17,15 +17,15 @@ body {
   @apply text-teal-950 text-2xl font-black
 }
 .sidebar-link-active {
-  @apply flex flex-row items-center gap-2 p-4 rounded-xl font-bold text-teal-950 bg-orange-100 border-orange-100 hover:text-teal-950 hover:shadow-sm no-underline;
+  @apply flex flex-row items-center gap-2 p-4 rounded-xl text-lg font-bold text-teal-950 bg-orange-100 border-orange-100 hover:text-teal-950 hover:shadow-sm no-underline;
 }
 
 .sidebar-link {
-  @apply flex flex-row items-center gap-2 p-4 rounded-xl font-medium text-teal-950 hover:bg-orange-50 hover:text-teal-950 hover:font-bold hover:shadow-sm no-underline;
+  @apply flex flex-row items-center gap-2 p-4 rounded-xl text-lg font-medium text-teal-950 hover:bg-orange-50 hover:text-teal-950 hover:font-bold hover:shadow-sm no-underline;
 }
 
 .btn {
-  @apply flex h-[62px] min-w-max p-3 rounded-xl justify-center content-center items-center text-center text-teal-950 font-bold bg-orange-400 hover:bg-orange-500 hover:text-teal-950 hover:font-bold hover:shadow-2xs; 
+  @apply flex h-[62px] min-w-max p-3 rounded-xl  text-lg justify-center content-center items-center text-center text-teal-950 font-bold bg-orange-400 hover:bg-orange-500 hover:text-teal-950 hover:font-bold hover:shadow-2xs; 
 }
 
 
