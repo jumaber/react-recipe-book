@@ -38,11 +38,11 @@ body {
   @apply p-2 rounded-xl text-xs font-semibold text-sky-950 hover:bg-rose-200 hover:text-teal-950 hover:font-bold;
 }
 
-.card{
-  @apply flex flex-col h-full bg-white p-4 rounded-xl shadow-[0_4px_10px_0px_rgba(0,0,0,0.1)];
+.card {
+  @apply flex flex-col h-full w-full bg-white p-4 rounded-xl shadow-[0_4px_10px_0px_rgba(0,0,0,0.1)];
 }
 
-.card-title{
+.card-title {
   @apply text-lg font-bold mt-2 overflow-hidden text-teal-900;
 }
 
@@ -51,9 +51,12 @@ body {
 }
 
 .card-wrapper {
-  @apply w-full sm:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6; /* 1 column on mobile, 2 on tablet, 3 on desktop */
+  @apply h-full w-full;
 }
 
+.card-wrapper > a {
+  @apply block h-full w-full;
+}
 
 .card-single-recipe-img{
   @apply w-full h-80 object-cover rounded-xl;

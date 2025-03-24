@@ -36,7 +36,7 @@ export function RecipeForm({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="p-10 bg-orange-50 h-full">
+    <div className="bg-orange-50 h-full py-10 sm:px-4 md:px-10 lg:px-80">
       <div className="bg-white my-10 p-6 rounded-lg ml-64">
         <div className="flex flex-row justify-between items-start w-full">
           <h1 className="mb-6 font-bold">Add your recipe</h1>
