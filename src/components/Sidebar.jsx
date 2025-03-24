@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import dashboard from "../assets/dashboard.png";
 import about from "../assets/info.png";
 
@@ -13,9 +13,23 @@ export function Sidebar (){
     <div className="flex flex-col fixed top-0 left-0 h-screen w-64 px-6 py-12 bg-white justify-between h-full">      
       <div>
         <Navbar />
-        <div className="flex flex-col justify-start">    
-          <Link to="/" className="sidebar-link-active"><img src={dashboard} alt="dashboard" className="h-4" />Dashboard</Link>
-          <Link to="/about" className="sidebar-link"><img src={about} alt="about" className="h-4" />About</Link>
+        <div className="flex flex-col justify-start gap-4">    
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => isActive ? "sidebar-link-active" : "sidebar-link"}
+          >
+            <img src={dashboard} alt="dashboard" className="h-4" />
+            Dashboard
+          </NavLink>
+
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => isActive ? "sidebar-link-active" : "sidebar-link"}
+          >
+            <img src={about} alt="about" className="h-4" />
+            About
+          </NavLink>
+
         </div>
       </div>
       <Footer />
