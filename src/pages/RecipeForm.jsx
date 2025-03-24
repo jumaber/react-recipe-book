@@ -1,47 +1,52 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import close from "../assets/close.svg";
-import { Button } from '/src/components/Button';
+import addIcon from "../assets/add.svg"
 
 export function RecipeForm({ recipes, setRecipes }) {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [directions, setDirections] = useState("");
+  const navigate = useNavigate();
 
-  
   const addRecipe = () => {
+    if (!title.trim() || !ingredients.trim() || !directions.trim()) {
+      alert("Please fill in all fields.");
+      return;
+    }
 
-    // Create a new recipe object.
     const newRecipe = {
       id: recipes.length + 1,
-      title: title,
-      ingredients: ingredients,
-      directions: directions,
-      image: [] 
+      title,
+      ingredients: ingredients.split(",").map(i => i.trim()),
+      directions: directions.split(".").map(d => d.trim()).filter(Boolean),
+      image: []  // Or add a placeholder image URL
     };
 
-    // Update local state
     const updatedRecipes = [...recipes, newRecipe];
     setRecipes(updatedRecipes);
 
+    // Reset form fields
+    setTitle("");
+    setIngredients("");
+    setDirections("");
 
-    console.log("button worked")
+    // Go back to homepage
+    navigate("/");
   };
 
   return (
     <div className="p-10 bg-orange-50 h-full">
       <div className="bg-white my-10 p-6 rounded-lg ml-64">
-        {/* Header */}
         <div className="flex flex-row justify-between items-start w-full">
           <h1 className="mb-6 font-bold">Add your recipe</h1>
-          <img src={close} alt="Close icon" />
+          <img src={close} alt="Close icon" className="cursor-pointer" onClick={() => navigate("/")} />
         </div>
 
         <div className="flex flex-col gap-6">
           {/* Title */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
-            <div className="flex flex-row justify-between items-center">
-              <div className="form-title font-bold text-xl">Title</div>
-            </div>
+            <div className="form-title font-bold text-xl">Title</div>
             <input 
               type="text"
               value={title}
@@ -53,9 +58,7 @@ export function RecipeForm({ recipes, setRecipes }) {
 
           {/* Ingredients */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
-            <div className="flex flex-row justify-between items-center">
-              <div className="form-title font-bold text-xl">Ingredients</div>
-            </div>
+            <div className="form-title font-bold text-xl">Ingredients</div>
             <textarea 
               value={ingredients}
               onChange={(e) => setIngredients(e.target.value)}
@@ -66,9 +69,7 @@ export function RecipeForm({ recipes, setRecipes }) {
 
           {/* Directions */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
-            <div className="flex flex-row justify-between items-center">
-              <div className="form-title font-bold text-xl">Directions</div>
-            </div>
+            <div className="form-title font-bold text-xl">Directions</div>
             <textarea 
               value={directions}
               onChange={(e) => setDirections(e.target.value)}
@@ -77,8 +78,10 @@ export function RecipeForm({ recipes, setRecipes }) {
             />
           </div>
 
-          {/* Button triggers addRecipe on click */}
-          <Button onClick={addRecipe} text="Add Recipe" />
+          <button className="btn" onClick={addRecipe}>
+            <img src={addIcon} className="mr-2" />
+            Add Recipe
+          </button>
         </div>
       </div>
     </div>
