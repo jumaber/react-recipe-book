@@ -29,6 +29,10 @@ body {
   @apply flex h-[62px] min-w-max p-3 rounded-xl  text-lg justify-center content-center items-center text-center text-teal-950 font-bold bg-orange-400 hover:bg-orange-500 hover:text-teal-950 hover:font-bold hover:shadow-2xs; 
 }
 
+.btn-mobile {
+  @apply flex h-[62px] w-full p-3 rounded-xl  text-lg justify-center content-center items-center text-center text-teal-950 font-bold bg-orange-400 hover:bg-orange-500 hover:text-teal-950 hover:font-bold hover:shadow-2xs; 
+}
+
 
 .btn-sm {
   @apply flex h-[43px] min-w-max p-3 rounded-xl justify-center content-center items-center text-center text-white font-bold bg-teal-950 hover:bg-teal-800; 

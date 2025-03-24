@@ -1,10 +1,12 @@
 import { Card } from "/src/components/Card";
 import { Button } from "/src/components/Button";
 import { Link } from "react-router-dom";
+import add from "../assets/add.svg";
+
 
 export function MainContent({ recipes }) {
   return (
-    <div className="ml-64 h-screen overflow-y-auto p-8 py-12 bg-orange-100">
+    <div className="h-screen overflow-y-auto p-3 md:p-6 lg:p-8 py-12 bg-orange-100 lg:ml-64">
       {/* Header Section */}
       <div className="flex flex-row gap-4 items-start justify-between">
         <div className="flex flex-col">
@@ -14,7 +16,7 @@ export function MainContent({ recipes }) {
           </p>
         </div>
 
-        <Link to="/recipeform">
+        <Link to="/recipeform" className="hidden md:flex">
           <Button />
         </Link>
       </div>
@@ -31,6 +33,16 @@ export function MainContent({ recipes }) {
           </Link>
         ))}
       </div>
-    </div>
+       
+      <div className="flex w-full">
+        <Link to="/recipeform" className="flex fixed left-1 justify-end w-full p-3 bottom-4 z-50 md:hidden">
+          <div className="btn">
+            <img src={add} className="mr-2" />
+            Add Recipe
+          </div>    
+        </Link>
+      </div>
+
+  </div>
   );
 }

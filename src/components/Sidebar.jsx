@@ -10,7 +10,7 @@ import { Navbar } from "/src/components/Navbar";
 
 export function Sidebar (){
    return (
-    <div className="flex flex-col fixed top-0 left-0 h-screen w-64 px-6 py-12 bg-white justify-between h-full sm:hidden lg:flex">      
+    <div className="flex flex-col fixed top-0 left-0 h-screen w-64 px-6 py-12 bg-white justify-between h-full hidden lg:flex">      
       <div>
         <Navbar />
         <div className="flex flex-col justify-start gap-4">    
