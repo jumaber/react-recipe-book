@@ -68,6 +68,8 @@ npm run dev
 ## 📸 Preview
 Here’s a sneak peek of Peachy in action:
 
+---
+
 ## ✍️ Contributing
 This project was created by Fábio Miranda and Júlia Marí Bernaus as a learning exercise. Feel free to fork it and make it your own!
 
