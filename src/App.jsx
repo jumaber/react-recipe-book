@@ -12,16 +12,7 @@ import { MobileMenu } from './components/MobileMenu';
 
 function App() {
   // State to hold all recipes
-  const [recipes, setRecipes] = useState(() => {
-    // Load from localStorage if available, otherwise use initial JSON
-    const stored = localStorage.getItem("recipes");
-    return stored ? JSON.parse(stored) : recipesData;
-  });
-
-  // Save recipes to localStorage every time they change
-  useEffect(() => {
-    localStorage.setItem("recipes", JSON.stringify(recipes));
-  }, [recipes]);
+  const [recipes, setRecipes] = useState(recipesData);
 
   return (
     <>
