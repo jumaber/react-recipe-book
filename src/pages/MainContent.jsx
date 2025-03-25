@@ -23,15 +23,17 @@ export function MainContent({ recipes }) {
 
       {/* Grid of Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 mt-14 w-full">
-        {recipes.map((recipe) => (
+        {recipes.map((recipe, index) => (
           <Link
             to={`/recipe/${recipe.id}`}
             key={recipe.id}
-            className="card-wrapper"
+            className={`card-wrapper opacity-0 animate-fade-in-up`}
+            style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'forwards' }}
           >
             <Card recipe={recipe} />
           </Link>
         ))}
+
       </div>
        
       <div className="flex w-full">

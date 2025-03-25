@@ -16,7 +16,7 @@ export function RecipeForm({ recipes, setRecipes }) {
     }
 
     const newRecipe = {
-      id: recipes.length + 1,
+      id: crypto.randomUUID(), // substituted by recipe.length +1, so that if a recipe is deleted, there are no problems with the new IDs
       title,
       ingredients: ingredients.split("\n").map(i => i.trim()), //each line is the delimiter
       directions: directions.split("\n").map(d => d.trim()).filter(Boolean), //each line is the delimiter
@@ -36,8 +36,8 @@ export function RecipeForm({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="flex bg-orange-50 pt-10 h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 items-end">
-      <div className="flex flex-col bg-white rounded-lg w-full p-3 max-h-fit md:m-4 md:p-6 xl:w-4xl animate-slide-up sm:animate-slide-up sm:transition-transform">
+    <div className="flex bg-orange-50 pt-10 h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 items-end lg:justify-center lg:items-center">
+      <div className="flex flex-col bg-white rounded-lg w-full p-3 max-h-fit md:mx-4 md:px-6 xl:w-4xl animate-slide-up sm:animate-slide-up sm:transition-transform">
         <div className="flex flex-row justify-between items-start">
           <p className="mb-6 font-bold text-4xl md:text-5xl lg:text-[6xl]">Add your recipe</p>
           <img src={close} alt="Close icon" className="cursor-pointer" onClick={() => navigate("/")} />

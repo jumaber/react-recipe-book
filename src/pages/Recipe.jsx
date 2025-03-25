@@ -1,32 +1,41 @@
 import close from "../assets/close.svg";
 import { useParams, useNavigate } from "react-router-dom";
 
-export function Recipe({ recipes, setRecipes }) {
-  const navigate = useNavigate();
+
+  export function Recipe({ recipes, setRecipes }) {
+
+    const navigate = useNavigate();
+
   const { id } = useParams();
 
   if (!recipes) {
     return <div>No recipe data available.</div>;
   }
 
-  const currentRecipe = recipes.find((recipe) => recipe.id === parseInt(id));
+  const currentRecipe = recipes.find((recipe) => String(recipe.id) === id);
+
 
   if (!currentRecipe) {
     return <div>Recipe not found.</div>;
   }
 
-  const deleteRecipe = (id) => {
-    const updatedRecipes = recipes.filter((recipe) => recipe.id !== id);
+  const deleteRecipe = (idToDelete) => {
+    const updatedRecipes = recipes.filter((recipe) => String(recipe.id) !== String(idToDelete));
     setRecipes(updatedRecipes);
     navigate("/");
   };
 
+
+ 
+
+
   return (
-    <div className="flex bg-orange-50 pt-10 h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 "> 
-      <div className="flex flex-col w-full bg-white rounded-lg w-full p-3 h-fit md:m-4 md:p-6 animate-slide-up sm:animate-slide-up sm:transition-transform">
+    <div className={"flex bg-orange-50 pt-10 h-fit lg:h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64"}>
+      <div className="flex flex-col w-full bg-white rounded-lg p-3 h-fit md:mx-4 md:p-6 animate-slide-up sm:animate-slide-up sm:transition-transform">
+        
         {/* Header */}
         <div className="mb-6 flex flex-row justify-end">
-          <img src={close} alt="Close icon" className="cursor-pointer" onClick={() => navigate("/")} />
+          <img src={close} alt="Close icon" className="cursor-pointer" />
         </div>
         
         {currentRecipe.image.length > 0 && (
