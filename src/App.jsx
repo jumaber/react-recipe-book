@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { MainContent } from './pages/MainContent';
 import { Recipe } from './pages/Recipe';
