@@ -1,6 +1,6 @@
 import { useState } from "react";
-import close from "../assets/close.svg";
 import { useParams, useNavigate } from "react-router-dom";
+import close from "../assets/close.svg";
 
 export function Recipe({ recipes, setRecipes }) {
   const navigate = useNavigate();
@@ -53,13 +53,16 @@ export function Recipe({ recipes, setRecipes }) {
           />
         </div>
 
-        {currentRecipe.image?.length > 0 && (
-          <img
-            src={currentRecipe.image[0]}
-            className="card-single-recipe-img"
-            alt={currentRecipe.title}
-          />
-        )}
+        {currentRecipe.image?.[0] ? (
+        <img
+          src={currentRecipe.image[0]}
+          className="card-single-recipe-img"
+          alt={currentRecipe.title}
+        />
+      ) : (
+        <div className="card-single-recipe-img bg-blue-50 flex items-center justify-center text-teal-950 font-bold text-3xl">
+        </div>
+      )}
 
         <p className="my-6 font-bold text-4xl md:text-5xl lg:text-[6xl]">
           {currentRecipe.title}
