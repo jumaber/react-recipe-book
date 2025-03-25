@@ -51,7 +51,7 @@ src/
 
 ---
 
-## 🚀 Getting Started (macOS)
+## 🚀 Getting Started
 
 fork repo
 
