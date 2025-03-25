@@ -39,7 +39,7 @@ export function RecipeForm({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="flex bg-orange-50 pt-10 h-fit lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 items-end lg:justify-center lg:items-center">
+    <div className="flex bg-orange-50 pt-10 h-fit lg:h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 items-end lg:justify-center lg:items-center">
       <div className="flex flex-col bg-white rounded-lg w-full p-3 max-h-fit md:mx-4 md:px-6 xl:w-4xl animate-slide-up sm:animate-slide-up sm:transition-transform">
         
         {/* Header */}
