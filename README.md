@@ -32,13 +32,21 @@ Welcome to **Peachy**, a fun and vibrant recipe book built using React! This pro
 
 ## 📁 Project Structure
 src/ 
+
 ├── assets/ # Icons and images 
+
 ├── components/ # Reusable UI components (Sidebar, Button, Card, etc.) 
+
 ├── pages/ # Page views (MainContent, Recipe, RecipeForm, etc.) 
+
 ├── App.jsx # Main app layout and routing 
+
 ├── recipes.json # Starter data for recipes 
+
 ├── index.css # Base styles 
+
 ├── App.css # Tailwind utilities and custom animations 
+
 └── main.jsx # App entry point
 
 ---
@@ -46,10 +54,13 @@ src/
 ## 🚀 Getting Started (macOS)
 
 fork repo
+
 git clone https://github.com/jumaber/react-recipe-book.git
+
 cd react-recipe-book
 
 npm install
+
 npm run dev
 
 ---
@@ -57,7 +68,7 @@ npm run dev
 ## 📸 Preview
 Here’s a sneak peek of Peachy in action:
 
-##✍️ Contributing
+## ✍️ Contributing
 This project was created by Fábio Miranda and Júlia Marí Bernaus as a learning exercise. Feel free to fork it and make it your own!
 
 ---
