@@ -22,8 +22,8 @@ export function Recipe({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="flex bg-orange-50 h-auto p-3 lg:p-10"> 
-      <div className="flex flex-col w-full min-h-min bg-white my-10 p-6 rounded-lg lg:ml-64">
+    <div className="flex bg-orange-50 pt-10 h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 "> 
+      <div className="flex flex-col w-full bg-white rounded-lg w-full p-3 h-fit md:m-4 md:p-6 animate-slide-up sm:animate-slide-up sm:transition-transform">
         {/* Header */}
         <div className="mb-6 flex flex-row justify-end">
           <img src={close} alt="Close icon" className="cursor-pointer" onClick={() => navigate("/")} />
@@ -37,12 +37,12 @@ export function Recipe({ recipes, setRecipes }) {
           />
         )}
         
-        <h1 className="my-6 font-bold">{currentRecipe.title}</h1>
+        <p className="my-6 font-bold text-4xl md:text-5xl lg:text-[6xl]">{currentRecipe.title}</p>
 
                 {/* Ingredients & Directions */}
         <div className="flex flex-col lg:flex-row gap-6 w-full">
           {/* Ingredients */}
-          <div className="rounded-xl bg-amber-50 p-4 w-full lg:w-auto lg:w-[35%] lg:h-fit">
+          <div className="rounded-xl bg-amber-50 p-4 w-full lg:w-auto lg:min-w-xs lg:max-w-md xl:min-w-lg lg:h-fit">
             <div className="font-bold pb-4">Ingredients</div>
             <ul className="list-none list-inside">
               {currentRecipe.ingredients.map((item, index) => (
@@ -52,7 +52,7 @@ export function Recipe({ recipes, setRecipes }) {
           </div>
 
           {/* Directions */}
-          <div className="rounded-xl bg-orange-100 p-4 w-full lg:w-[65%] lg:h-fit">
+          <div className="rounded-xl bg-orange-100 p-4 w-full lg:h-fit">
             <div className="font-bold pb-4">Directions</div>
             <ol className="list-decimal list-inside">
               {currentRecipe.directions.map((step, index) => (

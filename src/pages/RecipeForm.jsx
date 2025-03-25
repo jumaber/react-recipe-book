@@ -36,10 +36,10 @@ export function RecipeForm({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="bg-orange-50 h-full py-10 sm:px-4 md:px-10 lg:px-80">
-      <div className="bg-white my-10 p-6 rounded-lg ml-64">
-        <div className="flex flex-row justify-between items-start w-full">
-          <h1 className="mb-6 font-bold">Add your recipe</h1>
+    <div className="flex bg-orange-50 pt-10 h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 items-end">
+      <div className="flex flex-col bg-white rounded-lg w-full p-3 max-h-fit md:m-4 md:p-6 xl:w-4xl animate-slide-up sm:animate-slide-up sm:transition-transform">
+        <div className="flex flex-row justify-between items-start">
+          <p className="mb-6 font-bold text-4xl md:text-5xl lg:text-[6xl]">Add your recipe</p>
           <img src={close} alt="Close icon" className="cursor-pointer" onClick={() => navigate("/")} />
         </div>
 
@@ -78,7 +78,7 @@ export function RecipeForm({ recipes, setRecipes }) {
             />
           </div>
 
-          <button className="btn" onClick={addRecipe}>
+          <button className="btn pb-6" onClick={addRecipe}>
             <img src={addIcon} className="mr-2" />
             Add Recipe
           </button>
