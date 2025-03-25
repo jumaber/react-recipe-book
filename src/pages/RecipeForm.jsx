@@ -69,7 +69,7 @@ export function RecipeForm({ recipes, setRecipes }) {
               value={ingredients}
               onChange={(e) => setIngredients(e.target.value)}
               className="input-field bg-white rounded-lg min-h-[120px] p-4 mt-4" 
-              placeholder="Write your ingredients here (separated by commas)..." 
+              placeholder="Split your ingredients by lines here..." 
             />
           </div>
 
@@ -80,7 +80,7 @@ export function RecipeForm({ recipes, setRecipes }) {
               value={directions}
               onChange={(e) => setDirections(e.target.value)}
               className="input-field bg-white rounded-lg min-h-[120px] p-4 mt-4" 
-              placeholder="Write your directions here (separate steps with periods)..." 
+              placeholder="Split your directions by lines here..." 
             />
           </div>
 
