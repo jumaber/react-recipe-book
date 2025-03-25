@@ -1,7 +1,7 @@
 export function Card({ recipe }) {
 
   return (
-    <div className="card h-full">
+    <div className="card">
       {recipe.image?.[0] ? (
         <img
           src={recipe.image[0]}

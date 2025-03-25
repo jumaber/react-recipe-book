@@ -6,7 +6,7 @@ import add from "../assets/add.svg";
 
 export function MainContent({ recipes }) {
   return (
-    <div className="h-screen overflow-y-auto p-3 md:p-6 lg:p-8 py-12 bg-orange-100 lg:ml-64">
+    <div className="h-screen overflow-y-auto px-3 pb-3 pt-10 md:px-6 md:pt-10 md:pb-3 lg:p-8 py-12 bg-orange-100 lg:ml-64">
       {/* Header Section */}
       <div className="flex flex-row gap-4 items-start justify-between">
         <div className="flex flex-col">

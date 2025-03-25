@@ -21,7 +21,11 @@ body {
   @apply text-teal-950 text-2xl font-black
 }
 
-.sidebar-link-active {
+.hmbg-menu{
+  @apply bg-white p-3 border-none outline-none focus:outline-none
+}
+
+  .sidebar-link-active {
   @apply flex flex-row items-center gap-2 p-4 rounded-xl text-lg font-bold text-teal-950 bg-orange-100 border-orange-100 hover:text-teal-950 hover:shadow-sm no-underline;
 }
 

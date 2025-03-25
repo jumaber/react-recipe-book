@@ -8,6 +8,7 @@ import { PageNotFound } from './pages/PageNotFound';
 import { Routes, Route } from 'react-router-dom';
 import recipesData from './recipes.json';
 import { RecipeForm } from './pages/RecipeForm';
+import { MobileMenu } from './components/MobileMenu';
 
 function App() {
   const [recipes, setRecipes] = useState(() => {
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <Sidebar />
+      <MobileMenu />
   
       <Routes>
         <Route path="/" element={<MainContent recipes={recipes} />} />

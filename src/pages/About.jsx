@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <div className="flex bg-orange-100 pt-10 h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 justify-center items-center">
+    <div className="flex bg-orange-100 pt-10 h-full items-start lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 justify-center lg:items-center">
       <div className="flex flex-col bg-white rounded-lg w-full p-6 max-h-fit mx-4 px-8 xl:w-4xl animate-slide-up sm:animate-slide-up sm:transition-transform">
         <p className="text-4xl md:text-5xl lg:text-[6xl] font-black text-teal-950 mb-6 text-center">About this project</p>
 
