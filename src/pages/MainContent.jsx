@@ -41,7 +41,7 @@ export function MainContent({ recipes }) {
        
       {/* Floating Add button (only visible on small screens) */}
       <div className="flex w-full">
-        <Link to="/recipeform" className="flex fixed left-1 justify-end w-full p-3 bottom-4 z-50 md:hidden">
+        <Link to="/recipeform" className="flex fixed left-1 justify-end w-full p-3 bottom-0 z-50 md:hidden">
           <div className="btn">
             <img src={add} className="mr-2" />
             Add Recipe

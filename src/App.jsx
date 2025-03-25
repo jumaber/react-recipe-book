@@ -9,6 +9,8 @@ import { Routes, Route } from 'react-router-dom';
 import recipesData from './recipes.json';
 import { RecipeForm } from './pages/RecipeForm';
 import { MobileMenu } from './components/MobileMenu';
+import { EditRecipe } from "./pages/EditRecipe"; // import the new page
+
 
 function App() {
   // State to hold all recipes
@@ -31,10 +33,22 @@ function App() {
         <Route path="/about" element={<About />} />
 
         {/* Recipe detail page */}
-        <Route path="/recipe/:id" element={<Recipe recipes={recipes} setRecipes={setRecipes} />} />
+        <Route
+          path="/recipe/:id"
+          element={<Recipe recipes={recipes} setRecipes={setRecipes} />}
+        />
 
         {/* Recipe creation form */}
-        <Route path="/recipeform" element={<RecipeForm recipes={recipes} setRecipes={setRecipes} />} />
+        <Route
+          path="/recipeform"
+          element={<RecipeForm recipes={recipes} setRecipes={setRecipes} />}
+        />
+
+        {/* Recipe edit form */}
+        <Route
+          path="/edit/:id"
+          element={<EditRecipe recipes={recipes} setRecipes={setRecipes} />}
+        />
 
         {/* Fallback for unmatched routes */}
         <Route path="*" element={<PageNotFound />} />

@@ -42,7 +42,7 @@ export function Recipe({ recipes, setRecipes }) {
   };
 
   return (
-    <div className="flex bg-orange-50 pt-10 h-fit lg:h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64">
+    <div className="flex bg-orange-50 pt-10 h-fit lg:min-h-fit lg:h-full lg:py-10 lg:px-4 lg:ml-64 xl:ml-64">
       <div
         className={`flex flex-col w-full bg-white rounded-lg p-3 h-fit md:mx-4 md:p-6 sm:transition-transform ${
           isClosing ? "animate-slide-down" : "animate-slide-up"
@@ -110,7 +110,16 @@ export function Recipe({ recipes, setRecipes }) {
           >
             Delete
           </button>
-          <button className="btn-sm">Edit</button> {/* Edit feature not implemented yet */}
+          <button
+            className="btn-sm"
+            onClick={() =>
+              navigate(`/edit/${currentRecipe.id}`, {
+                state: { recipe: currentRecipe },
+              })
+            }
+          >
+            Edit
+          </button>
         </div>
       </div>
     </div>

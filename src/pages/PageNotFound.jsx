@@ -3,9 +3,13 @@ import broccoliImg from "../assets/broccoli.svg";
 
 export function PageNotFound() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen ml-64 p-4 bg-orange-100 text-center">
-      <h1 className="text-5xl font-black mb-4 text-teal-950">404: Broccoli not found.</h1>
-      <p className="text-xl mb-10 text-teal-800">Don’t worry, most people avoid it anyway.</p>
+    <div className="flex flex-col justify-center items-center h-screen lg:ml-64 p-4 bg-orange-100 text-center">
+      <h1 className="text-5xl font-black mb-4 text-teal-950">
+        404: Broccoli not found.
+      </h1>
+      <p className="text-xl mb-10 text-teal-800">
+        Don’t worry, most people avoid it anyway.
+      </p>
 
       {/* Sneaky Broccoli */}
       <img
@@ -15,7 +19,9 @@ export function PageNotFound() {
       />
 
       <Link to="/" className="btn-sm mt-12">
-        Go back to tastier things
+        <p className="hover:text-white focus:text-white active:text-white">
+          Go back to tastier things
+        </p>
       </Link>
     </div>
   );
