@@ -14,7 +14,7 @@ export function MobileMenu() {
   return (
     <>
       {/* Top navigation bar (visible only on small screens) */}
-      <div className="lg:hidden fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-white shadow-md z-50">
+      <div className="lg:hidden fixed top-0 left-0 w-full flex justify-between items-center px-4 bg-white shadow-md z-50">
         
         {/* App logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -67,7 +67,7 @@ export function MobileMenu() {
       )}
 
       {/* Adds space below fixed nav so it doesn’t cover page content */}
-      <div className="lg:hidden h-[72px]" />
+      <div className="lg:hidden h-[56px]" />
     </>
   );
 }
