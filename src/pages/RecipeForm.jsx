@@ -1,80 +1,85 @@
+// Import React hooks and navigation from React Router
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
 
+// Import images/icons used in the component
 import close from "../assets/close.svg";
-import addIcon from "../assets/add.svg"
+import addIcon from "../assets/add.svg";
 
-
-// RecipeForm component accepts recipe list and setter function as props
+// Component for the recipe form
 export function RecipeForm({ recipes, setRecipes }) {
-  const [title, setTitle] = useState(""); // Title input state
-  const [ingredients, setIngredients] = useState(""); // Ingredients input state (multi-line string)
-  const [directions, setDirections] = useState(""); // Directions input state (multi-line string)
-  const navigate = useNavigate(); // Navigation hook from React Router
-  const [imageFile, setImageFile] = useState(null);
-  const [imageUrl, setImageUrl] = useState("");
-  const location = useLocation();
-  const editingRecipe = location.state?.recipe || null;
+  // State variables to store form inputs
+  const [title, setTitle] = useState("");
+  const [ingredients, setIngredients] = useState("");
+  const [directions, setDirections] = useState("");
+  const navigate = useNavigate(); // Hook to redirect after submission
+  const [imageFile, setImageFile] = useState(null); // File selected by user
+  const [imageUrl, setImageUrl] = useState(""); // Preview URL of uploaded image
 
+  // Function to upload selected image to Cloudinary
+  const uploadImageToCloudinary = async () => {
+    const data = new FormData();
+    data.append("file", imageFile);
+    data.append("upload_preset", "recipe_book");
 
- const uploadImageToCloudinary = async () => {
-   const data = new FormData();
-   data.append("file", imageFile);
-   data.append("upload_preset", "recipe_book"); // Set this in Cloudinary
-   const response = await fetch(
-     "https://api.cloudinary.com/v1_1/jumaber/image/upload",
-     {
-       method: "POST",
-       body: data,
-     }
-   );
-   const result = await response.json();
-   return result.secure_url;
- };
+    // Send the file to Cloudinary
+    const response = await fetch(
+      "https://api.cloudinary.com/v1_1/jumaber/image/upload",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
 
+    // Get the secure URL from the response
+    const result = await response.json();
+    return result.secure_url;
+  };
 
+  // Function to add a new recipe
   const addRecipe = async () => {
+    // Validate fields before proceeding
     if (!title.trim() || !ingredients.trim() || !directions.trim()) {
       alert("Please fill in all fields. Thank you!");
       return;
     }
 
+    // Upload image if one was selected
     let uploadedImageUrl = "";
     if (imageFile) {
       uploadedImageUrl = await uploadImageToCloudinary();
       console.log("Cloudinary URL:", uploadedImageUrl);
     }
 
+    // Create the recipe object
     const newRecipe = {
-      id: crypto.randomUUID(),
+      id: crypto.randomUUID(), // Unique ID for the recipe
       title,
-      ingredients: ingredients.split("\n").map((i) => i.trim()),
+      ingredients: ingredients.split("\n").map((i) => i.trim()), // Split and clean input by lines
       directions: directions
         .split("\n")
         .map((d) => d.trim())
-        .filter(Boolean),
-      image: uploadedImageUrl ? [uploadedImageUrl] : [],
+        .filter(Boolean), // Remove empty lines
+      image: uploadedImageUrl ? [uploadedImageUrl] : [], // Add image URL or keep it empty
     };
 
+    // Update recipe list and reset the form
     const updatedRecipes = [...recipes, newRecipe];
     setRecipes(updatedRecipes);
 
-    // Reset form
     setTitle("");
     setIngredients("");
     setDirections("");
     setImageFile(null);
 
+    // Redirect to the new recipe's page
     navigate(`/recipe/${newRecipe.id}`);
   };
-
-
 
   return (
     <div className="flex bg-orange-50 pt-10 h-fit lg:py-10 lg:px-4 lg:ml-64 xl:ml-64 items-end lg:justify-center lg:items-center">
       <div className="flex flex-col bg-white rounded-lg w-full p-3 max-h-fit md:mx-4 md:px-6 xl:w-4xl animate-slide-up sm:animate-slide-up sm:transition-transform">
-        {/* Header */}
+        {/* Header with title and close button */}
         <div className="flex flex-row justify-between items-start">
           <p className="mb-6 font-bold text-4xl md:text-5xl lg:text-[6xl]">
             Add your recipe
@@ -87,6 +92,7 @@ export function RecipeForm({ recipes, setRecipes }) {
           />
         </div>
 
+        {/* Form fields */}
         <div className="flex flex-col gap-6">
           {/* Title input */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
@@ -100,7 +106,7 @@ export function RecipeForm({ recipes, setRecipes }) {
             />
           </div>
 
-          {/* Ingredients textarea */}
+          {/* Ingredients input (textarea) */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
             <div className="form-title font-bold text-xl">Ingredients</div>
             <textarea
@@ -111,7 +117,7 @@ export function RecipeForm({ recipes, setRecipes }) {
             />
           </div>
 
-          {/* Directions textarea */}
+          {/* Directions input (textarea) */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
             <div className="form-title font-bold text-xl">Directions</div>
             <textarea
@@ -122,7 +128,7 @@ export function RecipeForm({ recipes, setRecipes }) {
             />
           </div>
 
-          {/* Upload Image */}
+          {/* Image upload */}
           <div className="form-container flex flex-col w-full bg-orange-200 rounded-lg p-4">
             <div className="form-title font-bold text-xl mb-2">Image</div>
             <input
@@ -153,4 +159,3 @@ export function RecipeForm({ recipes, setRecipes }) {
     </div>
   );
 }
-
