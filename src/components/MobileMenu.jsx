@@ -30,7 +30,7 @@ export function MobileMenu() {
 
       {/* Slide-down dropdown menu when hamburger is open */}
       {isOpen && (
-        <div className="lg:hidden fixed top-20 left-0 w-full bg-white shadow-md z-40 px-6 py-6 flex flex-col items-end gap-4">
+        <div className="lg:hidden fixed top-14 left-0 w-full bg-white shadow-md z-40 px-6 py-6 flex flex-col items-end gap-4">
           
           {/* Dashboard link */}
           <NavLink
